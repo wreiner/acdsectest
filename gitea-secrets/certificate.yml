@@ -4,6 +4,8 @@ kind: Certificate
 metadata:
   name: <gitea_fqdn>
   namespace: gitea
+  annotations:
+    avp.kubernetes.io/path: "argocd/secrets/data/gitea"
 spec:
   secretName: wildcard-gitea-tls
   dnsNames:
